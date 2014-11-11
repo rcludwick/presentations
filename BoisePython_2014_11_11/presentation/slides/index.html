@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Exploring python through IPython &mdash; Exploring python through IPython 2014.11.10 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2014.11.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <link rel="top" title="Exploring python through IPython 2014.11.10 documentation" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="exploring-python-through-ipython">
+<h1>Exploring python through IPython</h1>
+<div class="line-block">
+<div class="line">Rob Ludwick</div>
+<div class="line">11/11/2014</div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/rcludwick/presentations
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="installing-ipython">
+<h2>Installing IPython</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Through pip:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ pip install ipython
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="running-ipython">
+<h2>Running IPython</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ ipython
+
+
+Python 2.7.6 (default, Mar 22 2014, 22:59:56)
+Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+
+IPython 2.3.0 -- An enhanced Interactive Python.
+?         -&gt; Introduction and overview of IPython&#39;s features.
+%quickref -&gt; Quick reference.
+help      -&gt; Python&#39;s own help system.
+object?   -&gt; Details about &#39;object&#39;, use &#39;object??&#39; for extra
+             details.
+
+In [1]:
+</pre></div>
+</div>
+</div></blockquote>
+
+</article>
+<article class="slide level-2" id="useful-things">
+<h2>Useful Things</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Directives</p>
+<div class="highlight-python"><div class="highlight"><pre>%paste
+%cpaste
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Shell commands</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ls</span>
+<span class="n">cd</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="more-useful-things">
+<h2>More Useful Things</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Tab symbol name completion<ul>
+<li>Useful for navigating around a module</li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>reimport<ul>
+<li>editing python code on the fly</li>
+<li>doesn't require restart</li>
+</ul>
+</li>
+</ul>
+
+</article>
+<article class="slide level-2" id="and-more">
+<h2>...And More</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Copy input lines to github</p>
+<div class="highlight-python"><div class="highlight"><pre>pastebin 1-10
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Save lines to a file</p>
+<div class="highlight-python"><div class="highlight"><pre>save /tmp/file.txt 1-10
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="and-lots-more">
+<h2>...And Lots More</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Show the docstring for an object</p>
+<div class="highlight-python"><div class="highlight"><pre>In [5]: pdoc list
+
+Class docstring:
+    list() -&gt; new empty list
+    list(iterable) -&gt; new list initialized from iterable&#39;s items
+Init docstring:
+    x.__init__(...) initializes x; see help(type(x)) for signature
+</pre></div>
+</div>
+<p>Bring up the quick reference card</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">quickref</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="in-and-out">
+<h2>In and Out</h2>
+<ul>
+<li><p class="first">Case Sensitive</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">In[]</span></tt> is a list of strings typed by the user at the console</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">Out[]</span></tt> is a corresponding list of output</p>
+<blockquote>
+<div><ul class="simple">
+<li>If a function returns <tt class="docutils literal"><span class="pre">None</span></tt> it is placed in <tt class="docutils literal"><span class="pre">Out[]</span></tt> but not printed</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Assign the last output to a variable</p>
+<div class="highlight-python"><div class="highlight"><pre>In[3]: x = Out[2]
+</pre></div>
+</div>
+</li>
+<li><p class="first">Rerun a statement typed before</p>
+<div class="highlight-python"><div class="highlight"><pre>In[3]: exec In[2]
+</pre></div>
+</div>
+</li>
+</ul>
+
+</article>
+<article class="slide level-2" id="tabbing-around-a-package">
+<h2>Tabbing around a package</h2>
+<div class="highlight-python"><div class="highlight"><pre>In [31]: import itertools
+
+In [32]: itertools.&lt;tab&gt;
+itertools.chain
+itertools.combinations
+itertools.combinations_with_replacement
+itertools.compress
+itertools.count
+itertools.cycle
+itertools.dropwhile
+itertools.groupby
+itertools.ifilter
+itertools.ifilterfalse
+[...]
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="exploring-unknown-packages">
+<h2>Exploring unknown packages</h2>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>In [2]: import itertools
+
+In [3]: pdoc itertools.ifilterfalse
+Class docstring::
+    ifilterfalse(function or None, sequence) --&gt;
+            ifilterfalse object
+    Return those items of sequence for which function(item)
+        is false.
+    If function is None, return the items that are false.
+Init docstring:
+    x.__init__(...) initializes x; see help(type(x))
+        for signature
+</pre></div>
+</div>
+</div></blockquote>
+
+</article>
+<article class="slide level-2" id="ex-what-s-an-iterator">
+<h2>Ex: What's an iterator?</h2>
+<p>Two code segments</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">y</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">my_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">my_iter</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">y</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="ex-what-s-an-iterator-cont-d">
+<h2>Ex: What's an iterator? (cont'd)</h2>
+<p>Hmmm... let's look at <tt class="docutils literal"><span class="pre">__length_hint__</span></tt></p>
+<div class="highlight-python"><div class="highlight"><pre>In [13]: y = iter(x)
+
+In [14]: y.__length_hint__
+Out[14]: &lt;function __length_hint__&gt;
+
+In [15]: y.__length_hint__()
+Out[15]: 5
+</pre></div>
+</div>
+<p>What about <tt class="docutils literal"><span class="pre">next</span></tt>?</p>
+<div class="highlight-python"><div class="highlight"><pre>In [18]: y.next
+Out[18]: &lt;method-wrapper &#39;next&#39; of listiterator object at 0x7fd658042510&gt;
+
+In [19]: y.next()
+Out[19]: 1
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="id1">
+<h2>Ex:  What's an iterator? (cont'd)</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">__iter__</span></tt> function returns itself</p>
+<div class="highlight-python"><div class="highlight"><pre>In [16]: y.__iter__()
+Out[16]: &lt;listiterator at 0x7fd658042510&gt;
+
+In [17]: y
+Out[17]: &lt;listiterator at 0x7fd658042510&gt;
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="make-our-own-iterator">
+<h2>Make our own iterator</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Takes an iterator of integers</li>
+<li>Return all odd numbers</li>
+</ul>
+
+</article>
+<article class="slide level-2" id="code">
+<h2>Code</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">OddIter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Takes a list or iterator of integers.  Iterates through</span>
+<span class="sd">    the odd integers</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="k">return</span> <span class="n">n</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__length_hint__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterator</span><span class="o">.</span><span class="n">__length_hint__</span><span class="p">()</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="stopiteration">
+<h2>StopIteration</h2>
+<p><tt class="docutils literal"><span class="pre">OddIter</span></tt> stops when <tt class="docutils literal"><span class="pre">self.iterator</span></tt> throws <tt class="docutils literal"><span class="pre">StopIteration</span></tt></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c">#This Throws StopIteration when done</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">n</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>In [32]: y.next()
+------------------
+StopIteration
+&lt;ipython-input-32-75a92ee8313a&gt; in &lt;module&gt;()
+----&gt; 1 y.next()
+[...]
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="what-s-a-function">
+<h2>What's a Function?</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Let's create one:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>What's this <tt class="docutils literal"><span class="pre">__call__</span></tt>?:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [3]: my_func.__call__
+Out[3]: &lt;method-wrapper &#39;__call__&#39; of function object at 0x7ffdd...&gt;
+
+In [4]: my_func.__call__()
+Out[4]: 2
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="build-a-function-the-harder-way">
+<h2>Build a function the harder way</h2>
+<p>The following are equivalent:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">MyFunc</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span>
+
+<span class="n">my_func</span> <span class="o">=</span> <span class="n">MyFunc</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Both return the same thing:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [5]: my_func()
+Out[5]: 2
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="build-something-more-useful">
+<h2>Build Something More Useful</h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">class</span> <span class="nc">LogFunc</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Count the number of times a function has been run&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;function called {} times&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">count</span><span class="p">))</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="use-it">
+<h2>Use it</h2>
+<p>Pass a function into <tt class="docutils literal"><span class="pre">LogFunc</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [6]: l = LogFunc(my_func)
+</pre></div>
+</div>
+<p>Then call <tt class="docutils literal"><span class="pre">l</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [7]: l()
+function called 1 times
+In [8]: l()
+function called 2 times
+In [9]: l()
+function called 3 times
+</pre></div>
+</div>
+<p>We can redefine <tt class="docutils literal"><span class="pre">my_func</span></tt> (think: decorator)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">my_func</span> <span class="o">=</span> <span class="n">LogFunc</span><span class="p">(</span><span class="n">my_func</span><span class="p">)</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="abstract-into-python-types">
+<h2>Abstract into python types</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Decorators<ul>
+<li>Functions that return a function</li>
+</ul>
+</li>
+<li>Lists<ul>
+<li>Slices and Indexes</li>
+</ul>
+</li>
+<li>Dicts<ul>
+<li>Keys and values</li>
+</ul>
+</li>
+</ul>
+
+</article>
+<article class="slide level-2" id="function-pipelines">
+<h2>Function Pipelines</h2>
+<p><a class="reference external" href="http://code.activestate.com/recipes/577714-function-pipelines/">http://code.activestate.com/recipes/577714-function-pipelines/</a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">add_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">mul_2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">identity</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">add_1</span><span class="p">,</span> <span class="n">mul_2</span><span class="p">,</span> <span class="n">add_1</span><span class="p">,</span> <span class="n">mul_2</span><span class="p">,</span> <span class="n">identity</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="that-s-it">
+<h2>That's It!</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>email:</p>
+<div class="highlight-python"><div class="highlight"><pre>rcludw@gmail.com
+</pre></div>
+</div>
+<p>github repo of this presentation</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/rcludwick/presentations
+</pre></div>
+</div>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
