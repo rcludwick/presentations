@@ -346,10 +346,10 @@ Build Something More Useful
             self.count = 0
 
         def __call__(self, *args, **kwargs):
-            self.func(*args, **kwargs)
             self.count += 1
             sys.stderr.write('function called {} times'.format(
                     self.count))
+            return self.func(*args, **kwargs)
 
 Use it
 ======
