@@ -2,6 +2,9 @@
 .. The Algorithmic Coding Interview slides file, created by
    hieroglyph-quickstart on Mon Nov  9 22:28:33 2015.
 
+
+::
+
 ================================
 The Algorithmic Coding Interview
 ================================
@@ -103,8 +106,8 @@ Interview Basics
 
 
 
-.. slide::  Simple Question
-    :level: 2
+Simple Question
+===============
 
     .. rst-class:: build
 
@@ -291,10 +294,10 @@ Assume:
             self.right = right  #    Right and left point to
             self.left = left    #    other TreeNode instances
 
-Task:
-=====
+Problem #1:
+===========
 
-Given a binary tree, mirror it, swapping the left and right everywhere.
+Given a binary tree, mirror it, swapping the left and right nodes everywhere.
 
 
 DFS Solution
@@ -377,7 +380,7 @@ Interview Strategies
     - Some tests are looking to see how perceptive or insightful the candidate is.
 
 
-Problem #1
+Problem #2
 ==========
 
 Given two rectangles, return the area that they intersect.  If they don't intersect, return 0.
@@ -405,7 +408,7 @@ Given two rectangles, return the area that they intersect.  If they don't inters
 * :math:`Area = overlap(Xdimension) * overlap(Ydimension)`
 
 
-Problem #2 (From Project Euler)
+Problem #3 (From Project Euler)
 ===============================
 
 Starting at the top left corner of a 2x2 grid, and only being able to move right and down, there are 6 routes to the bottom right corner
@@ -416,7 +419,7 @@ Starting at the top left corner of a 2x2 grid, and only being able to move right
 
 * How many such routes are there though a 20x20 grid?  
 
-Problem #2 (Cont'd)
+Problem #3 (Cont'd)
 ===============================
 
 .. rst-class:: build
@@ -428,7 +431,7 @@ Problem #2 (Cont'd)
 * What's the fastest answer we can expect?
 
 
-Problem #2 Solution
+Problem #3 Solution
 ===============================
 
 .. rst-class:: build
@@ -448,6 +451,45 @@ Problem #2 Solution
     * Each number corresponds to :math:`n! /(n - r)! r!` which calculates the number of combinations.
 
     * The triangle is rotated 45 degrees and x and y need to be translated.
+
+
+What's Fair Game?
+=================
+
+.. rst-class:: build
+
+* Basic data structures
+
+    * binary trees
+
+    * linked lists
+
+    * queues (priority queues)
+
+    * hash maps
+
+* Optimization of algorithms
+
+    * time efficient
+
+    * space efficient
+
+* Sorting and Searching Algorithms
+
+    * Merge Sort
+
+    * Quick Sort
+
+    * Radix Sort
+
+    * Binary Search
+
+* Big O Notation
+
+
+
+
+
 
 
 Resources 
