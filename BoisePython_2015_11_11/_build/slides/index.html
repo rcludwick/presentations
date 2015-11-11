@@ -1,0 +1,725 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+--><!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>The Algorithmic Coding Interview &mdash; The Algorithmic Coding Interview</title>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="hieroglyph-title" data-config-title>
+  <meta name="hieroglyph-subtitle" data-config-subtitle>
+  <meta name="hieroglyph-presenter" data-config-presenter>
+
+  
+  <link rel="stylesheet" media="all"
+        href="_static/theme/css/default.css">
+  <link rel="stylesheet" media="all"
+        href="_static/theme/css/hieroglyph.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)"
+        href="_static/theme/css/phone.css">
+
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.11.09',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <script data-main="_static/js/slides"
+            src="_static/js/require-1.0.8.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="top" title="The Algorithmic Coding Interview" href="#" /> 
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  
+
+  
+    <slide class="title-slide segue nobackground level-1" id="the-algorithmic-coding-interview">
+    <hgroup>
+      <h1>The Algorithmic Coding Interview</h1>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Rob Ludwick (&#64;robludwick)</div>
+<div class="line">11/11/2015</div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="git">
+    <hgroup>
+      <h2>git</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>$ git clone https://github.com/rcludwick/presentations
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="why-am-i-giving-this-talk">
+    <hgroup>
+      <h2>Why am I giving this talk?</h2>
+    </hgroup>
+    <article class="">
+      <p>Great question...</p>
+<a class="reference internal image-reference" href="http://img.memecdn.com/my-friend-dropped-this-one-during-is-job-interview-never-called-him-back_o_2256999.webp"><img alt="http://img.memecdn.com/my-friend-dropped-this-one-during-is-job-interview-never-called-him-back_o_2256999.webp" src="http://img.memecdn.com/my-friend-dropped-this-one-during-is-job-interview-never-called-him-back_o_2256999.webp" style="height: 450px;" /></a>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="what-s-the-point-of-interviewing-this-way">
+    <hgroup>
+      <h2>What's the point of interviewing this way?</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>It is perceived as the best predictor for a short interview process.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Google</li>
+<li>Facebook</li>
+<li>Symantec</li>
+<li>LinkedIn</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="it-s-not-that-it-s-bad-per-se">
+    <hgroup>
+      <h2>It's not that it's bad, per se...</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="build simple">
+<li>But it does seem unfair...</li>
+<li>...especially if they ask you questions outside your immediate domain knowledge</li>
+</ul>
+</div></blockquote>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="google-knows-this">
+    <hgroup>
+      <h2>Google KNOWS this.</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="build simple">
+<li>They expect people to interview more than once</li>
+<li>60% of their employees did not succeed on the first interview</li>
+<li>It's not the best way to interview people unless you have the resources, say, Google.</li>
+</ul>
+</div></blockquote>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="but-not-everyone-else-knows-this">
+    <hgroup>
+      <h2>But not everyone else knows this!</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p><a href="https://twitter.com/mxcl">@mxcl</a></p>
+<blockquote class="twitter-tweet"><a href="https://twitter.com/mxcl/status/608682016205344768">https://twitter.com/mxcl/status/608682016205344768</a></blockquote>
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="interview-basics">
+    <hgroup>
+      <h2>Interview Basics</h2>
+    </hgroup>
+    <article class="">
+      <blockquote>
+<div><ul class="build simple">
+<li>Whiteboard or Shared Document Platform (Google Docs)</li>
+<li>Some problem of some algorithmic nature is presented</li>
+<li>Timed (25 minutes) to do as well as you can</li>
+</ul>
+</div></blockquote>
+
+
+
+
+    </article>
+  </slide>  <slide class="admonition-simple-question level-2">
+    <hgroup>
+      <h2>Simple Question</h2>
+    </hgroup>
+    <article class="">
+      <ul class="build simple">
+<li>Question:  What's the expected order for quicksort?</li>
+<li>Answer:  <span class="math">\(O(N log N)\)</span></li>
+<li>Question:  What's the worst case order?</li>
+<li>Answer:  <span class="math">\(O(N^2)\)</span></li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id1">
+    <hgroup>
+      <h2>???</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line">Do you even know what I'm asking?</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<img alt="http://cdn.meme.am/instances/500x/37607377.jpg" src="http://cdn.meme.am/instances/500x/37607377.jpg" />
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="big-o-notation">
+    <hgroup>
+      <h2>Big O Notation</h2>
+    </hgroup>
+    <article class="">
+      <blockquote>
+<div><ul class="build simple">
+<li>A way to describe time or space requirements for a given problem, useful for algorithms on large datasets</li>
+<li><span class="math">\(O(1)\)</span> means constant time or space</li>
+<li><span class="math">\(O(Log N)\)</span> means logarithmic time or space</li>
+<li><span class="math">\(O(N)\)</span> means linear time or space</li>
+<li><span class="math">\(O(N^2)\)</span> means polynomial time or space</li>
+<li><span class="math">\(O(2^N)\)</span> means exponential time or space</li>
+</ul>
+</div></blockquote>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="example-bubble-sort">
+    <hgroup>
+      <h2>Example:  Bubble Sort</h2>
+    </hgroup>
+    <article class="">
+      <div class="build highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">z</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="build">
+<li><p class="first">This is <span class="math">\(O(N^2)\)</span></p>
+</li>
+<li><p class="first">Why?</p>
+<blockquote>
+<div><ul class="simple">
+<li>The algorithm goes through a nested loop.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="example-searching-a-sorted-list">
+    <hgroup>
+      <h2>Example:  Searching a sorted list</h2>
+    </hgroup>
+    <article class="">
+      <div class="build highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds x in a sorted list l</span>
+
+<span class="sd">    :return: True if x is in l, False if x is not in l</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<ul class="build simple">
+<li>Order: <span class="math">\(O(N)\)</span></li>
+<li>Can we do better than <span class="math">\(O(N)\)</span>?</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="example-binary-search">
+    <hgroup>
+      <h2>Example:  Binary Search</h2>
+    </hgroup>
+    <article class="">
+      <div class="build highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">old_mid</span> <span class="o">=</span> <span class="n">left</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">if</span> <span class="n">old_mid</span> <span class="o">==</span> <span class="n">mid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="n">old_mid</span> <span class="o">=</span> <span class="n">mid</span>
+</pre></div>
+</div>
+<ul class="build simple">
+<li>Order: <span class="math">\(O(Log N)\)</span></li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="big-o">
+    <hgroup>
+      <h2>BIG O</h2>
+    </hgroup>
+    <article class="">
+      <div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<ul class="build">
+<li><p class="first">On large data sets N&gt;1M, Big O optimizations help immensely.</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math">\(O(NLogN) &lt;&lt; O(N^2)\)</span></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="binary-trees">
+    <hgroup>
+      <h2>Binary Trees</h2>
+    </hgroup>
+    <article class="">
+      <p class="build graphviz">
+<img src="_images/graphviz-915acf230c30e53dd9898a773ec6c252ab07e50c.png" alt="digraph G{
+  graph [ordering=&quot;out&quot;];
+  5 -&gt; 3;
+  5 -&gt; 8;
+  3 -&gt; 1;
+  3 -&gt; 4;
+  8 -&gt; 6;
+  8 -&gt; 12;
+}" />
+</p>
+<ul class="build simple">
+<li>Order:  <span class="math">\(O(LogN)\)</span></li>
+<li>Yes, these are fair game...</li>
+<li>...Because Google Says So.</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="binary-trees-cont-d">
+    <hgroup>
+      <h2>Binary Trees (cont'd)</h2>
+    </hgroup>
+    <article class="">
+      <p>Unbalanced Binary Tree</p>
+<a class="reference internal image-reference" href="_images/unbalancedtree.png"><img alt="_images/unbalancedtree.png" src="_images/unbalancedtree.png" style="height: 400px;" /></a>
+<ul class="build simple">
+<li>Worst Case Order:  <span class="math">\(O(N)\)</span></li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="o-1">
+    <hgroup>
+      <h2>O(1)</h2>
+    </hgroup>
+    <article class="">
+      <a class="reference internal image-reference" href="http://s2.quickmeme.com/img/c0/c043ca2c75608ca5170024702f2861d9755fd7975c6667476824fca99f5a7b42.jpg"><img alt="http://s2.quickmeme.com/img/c0/c043ca2c75608ca5170024702f2861d9755fd7975c6667476824fca99f5a7b42.jpg" src="http://s2.quickmeme.com/img/c0/c043ca2c75608ca5170024702f2861d9755fd7975c6667476824fca99f5a7b42.jpg" style="width: 800px;" /></a>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="depth-first-search-dfs-vs-breadth-first-search-bfs">
+    <hgroup>
+      <h2>Depth First Search (DFS) vs Breadth First Search (BFS)</h2>
+    </hgroup>
+    <article class="">
+      <p>Assume:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TreeNode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">right</span>  <span class="c">#    Right and left point to</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>    <span class="c">#    other TreeNode instances</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="task">
+    <hgroup>
+      <h2>Task:</h2>
+    </hgroup>
+    <article class="">
+      <p>Given a binary tree, mirror it, swapping the left and right everywhere.</p>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="dfs-solution">
+    <hgroup>
+      <h2>DFS Solution</h2>
+    </hgroup>
+    <article class="">
+      <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">mirror</span><span class="p">(</span><span class="n">treenode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;DFS Solution&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">treenode</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">mirror</span><span class="p">(</span><span class="n">treenode</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">treenode</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">mirror</span><span class="p">(</span><span class="n">treenode</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+
+    <span class="n">trenode</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">treenode</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">treenode</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">treenode</span><span class="o">.</span><span class="n">left</span>
+</pre></div>
+</div>
+<ul class="build simple">
+<li>What's the order?</li>
+<li>We're visitng every treenode once so O(N)</li>
+<li>Is there a solution that doesn't use recursion?</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="bfs-solution">
+    <hgroup>
+      <h2>BFS Solution</h2>
+    </hgroup>
+    <article class="">
+      <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">mirror</span><span class="p">(</span><span class="n">treenode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;BFS Solution&quot;&quot;&quot;</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">treenode</span><span class="p">]</span>
+
+    <span class="k">while</span> <span class="n">nodes</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span>
+</pre></div>
+</div>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="dfs-vs-bfs">
+    <hgroup>
+      <h2>DFS vs BFS</h2>
+    </hgroup>
+    <article class="">
+      <ul class="build">
+<li><dl class="first docutils">
+<dt>DFS</dt>
+<dd><ul class="first last simple">
+<li>Can get &quot;lost&quot; in a deeply unbalanced tree</li>
+<li>Recursion makes it easy to write, but is limited by stack depth</li>
+<li>Often hard to write without using recursion</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>BFS</dt>
+<dd><ul class="first last simple">
+<li>Easy to write without recursion</li>
+<li>Efficient if the answer is shallower than deeper in the tree</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Both solutions in this case are effectively <span class="math">\(O(N)\)</span></p>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="interview-strategies">
+    <hgroup>
+      <h2>Interview Strategies</h2>
+    </hgroup>
+    <article class="">
+      <ol class="build arabic simple">
+<li>Ask Questions<ul>
+<li>Make sure that you understand what is asked of you</li>
+<li>Clarify anything that's confusing</li>
+</ul>
+</li>
+<li>Build unit tests<ul>
+<li>Use test cases to clarify behavior with the interviewer</li>
+<li>Think about corner cases, you might hit.</li>
+</ul>
+</li>
+<li>If feasible, work through a couple of cases by hand, see if there's an easy solution<ul>
+<li>Perhaps there's a pattern that you can use.</li>
+<li>Some tests are looking to see how perceptive or insightful the candidate is.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="problem-1">
+    <hgroup>
+      <h2>Problem #1</h2>
+    </hgroup>
+    <article class="">
+      <p>Given two rectangles, return the area that they intersect.  If they don't intersect, return 0.</p>
+<div class="build highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x1</span> <span class="o">=</span> <span class="n">x1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x2</span> <span class="o">=</span> <span class="n">x2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y1</span> <span class="o">=</span> <span class="n">y1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y2</span> <span class="o">=</span> <span class="n">y2</span>
+</pre></div>
+</div>
+<ul class="build simple">
+<li>How many corner cases do you need to worry about?</li>
+<li>Is there a way that you can simplify the solution?</li>
+<li>Maybe using only one dimension at a time?</li>
+<li><span class="math">\(Area = overlap(Xdimension) * overlap(Ydimension)\)</span></li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="problem-2-from-project-euler">
+    <hgroup>
+      <h2>Problem #2 (From Project Euler)</h2>
+    </hgroup>
+    <article class="">
+      <p>Starting at the top left corner of a 2x2 grid, and only being able to move right and down, there are 6 routes to the bottom right corner</p>
+<img alt="https://projecteuler.net/project/images/p015.gif" src="https://projecteuler.net/project/images/p015.gif" />
+<ul class="build simple">
+<li>How many such routes are there though a 20x20 grid?</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="problem-2-cont-d">
+    <hgroup>
+      <h2>Problem #2 (Cont'd)</h2>
+    </hgroup>
+    <article class="">
+      <ul class="build simple">
+<li>What's the order of the solution?</li>
+<li>How long would it take to compute a grid of 1,000,000 squares on it's side?</li>
+<li>What's the fastest answer we can expect?</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="problem-2-solution">
+    <hgroup>
+      <h2>Problem #2 Solution</h2>
+    </hgroup>
+    <article class="">
+      <ul class="build">
+<li><p class="first">What's the fastest answer we can expect?</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math">\(O(1)\)</span></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Why?</p>
+<blockquote>
+<div><ul class="simple">
+<li>Working out the solution for a 4 x 4 cube gives answers equal to Pascal's Triangle</li>
+</ul>
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/PascalsTriangle.png/250px-PascalsTriangle.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/PascalsTriangle.png/250px-PascalsTriangle.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Why?</p>
+<blockquote>
+<div><ul class="simple">
+<li>Each number corresponds to <span class="math">\(n! /(n - r)! r!\)</span> which calculates the number of combinations.</li>
+<li>The triangle is rotated 45 degrees and x and y need to be translated.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="resources">
+    <hgroup>
+      <h2>Resources</h2>
+    </hgroup>
+    <article class="">
+      <p>Introduction to Algorithms, Third Edition (Cormen, Leiserson, Rivest, Stein)</p>
+<img alt="https://mitpress.mit.edu/sites/default/files/9780262033848.jpg" src="https://mitpress.mit.edu/sites/default/files/9780262033848.jpg" />
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="id2">
+    <hgroup>
+      <h2>Resources</h2>
+    </hgroup>
+    <article class="">
+      <p>Algorithms, Fourth Edition (Sedgewick)</p>
+<img alt="http://ecx.images-amazon.com/images/I/51UDgHU9z9L._SX404_BO1,204,203,200_.jpg" src="http://ecx.images-amazon.com/images/I/51UDgHU9z9L._SX404_BO1,204,203,200_.jpg" />
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="leetcode-com">
+    <hgroup>
+      <h2>leetcode.com</h2>
+    </hgroup>
+    <article class="">
+      <a class="reference internal image-reference" href="_images/leetcode.com.png"><img alt="_images/leetcode.com.png" src="_images/leetcode.com.png" style="width: 700px;" /></a>
+
+
+
+
+    </article>
+  </slide>  <slide class="level-2" id="project-euler">
+    <hgroup>
+      <h2>Project Euler</h2>
+    </hgroup>
+    <article class="">
+      <p><a class="reference external" href="http://projecteuler.net">http://projecteuler.net</a></p>
+<p><a class="reference external" href="https://pypi.python.org/pypi/EulerPy/">https://pypi.python.org/pypi/EulerPy/</a></p>
+
+
+
+
+    </article>
+  </slide>
+
+
+    <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
