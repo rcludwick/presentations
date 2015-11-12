@@ -3,7 +3,6 @@
    hieroglyph-quickstart on Mon Nov  9 22:28:33 2015.
 
 
-::
 
 ================================
 The Algorithmic Coding Interview
@@ -374,10 +373,11 @@ Interview Strategies
     - Use test cases to clarify behavior with the interviewer
     - Think about corner cases, you might hit.
 
-3.  If feasible, work through a couple of cases by hand, see if there's an easy solution
+3.  If feasible, work through a couple of test cases by hand, see if there's an easy solution
 
     - Perhaps there's a pattern that you can use.
     - Some tests are looking to see how perceptive or insightful the candidate is.
+    - Insight into the problem is valuable even if you can't solve it completely.
 
 
 Problem #2
@@ -420,7 +420,7 @@ Starting at the top left corner of a 2x2 grid, and only being able to move right
 * How many such routes are there though a 20x20 grid?  
 
 Problem #3 (Cont'd)
-===============================
+===================
 
 .. rst-class:: build
 
@@ -432,7 +432,7 @@ Problem #3 (Cont'd)
 
 
 Problem #3 Solution
-===============================
+===================
 
 .. rst-class:: build
 
@@ -442,15 +442,32 @@ Problem #3 Solution
 
 * Why?
 
-    * Working out the solution for a 4 x 4 cube gives answers equal to Pascal's Triangle
+    * Working out the solution for a 3 x 3 and 4 x 4 cube gives answers equal to Pascal's Triangle
+
+    * The triangle is rotated 45 degrees and x and y need to be translated.
 
     .. image:: https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/PascalsTriangle.png/250px-PascalsTriangle.png
 
-* Why?
 
-    * Each number corresponds to :math:`n! /(n - r)! r!` which calculates the number of combinations.
+Problem #3 Solution
+===================
 
-    * The triangle is rotated 45 degrees and x and y need to be translated.
+* Why :math:`O(1)`?
+
+    .. rst-class:: build
+
+    * Each number in pascals triangle can be computed directly.
+
+    * math:`n! /(n - r)! r!` which is also from statistics (number of combinations)
+
+        * :math:`n = rownum` where the first row is :math:`0'.
+
+        * :math:`r = colnum` where the first row is :math:`0'.
+
+    * Factorials can be computed using a lookup table.
+
+	
+
 
 
 What's Fair Game?
