@@ -452,17 +452,17 @@ Problem #3 Solution
 Problem #3 Solution
 ===================
 
-* Why :math:`O(1)`?
+* Why :math:`O(1)` ?
 
     .. rst-class:: build
 
     * Each number in pascals triangle can be computed directly.
 
-    * math:`n! /(n - r)! r!` which is also from statistics (number of combinations)
+    * :math:`n! /(n - r)! r!` which is also from statistics (number of combinations)
 
-        * :math:`n = rownum` where the first row is :math:`0'.
+        * :math:`n = rownum` where the first row is :math:`0`.
 
-        * :math:`r = colnum` where the first row is :math:`0'.
+        * :math:`r = colnum` where the first row is :math:`0`.
 
     * Factorials can be computed using a lookup table.
 
